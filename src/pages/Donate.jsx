@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn.jsx'
 
@@ -13,6 +14,7 @@ const supplies = [
 ]
 
 function Donate() {
+  useEffect(() => { document.title = 'Donate | West Side Smiles' }, [])
   return (
     <>
       <header className="page-header container">
@@ -29,6 +31,7 @@ function Donate() {
       <section className="section-tight">
         <div className="container">
           <FadeIn>
+            <h2 className="sr-only">Ways to Donate</h2>
             <div className="donate-grid">
               <div className="donate-card">
                 <div className="eyebrow">Option One</div>

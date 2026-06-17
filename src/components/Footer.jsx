@@ -30,6 +30,7 @@ function Footer() {
               <li><Link to="/events">Events</Link></li>
               <li><Link to="/donate">Donate</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/accessibility">Accessibility</Link></li>
             </ul>
           </div>
 

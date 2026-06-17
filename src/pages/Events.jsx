@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import FadeIn from '../components/FadeIn.jsx'
 import Slideshow from '../components/Slideshow.jsx'
 
@@ -9,13 +10,13 @@ const EVENT_BGS = [
   'var(--white)',
 ]
 
-function EventMedia({ images }) {
-  if (images.length <= 1) return <Slideshow images={images} />
+function EventMedia({ images, eventTitle }) {
+  if (images.length <= 1) return <Slideshow images={images} label={eventTitle} />
   const mid = Math.ceil(images.length / 2)
   return (
     <div className="event-media-split">
-      <Slideshow images={images.slice(0, mid)} />
-      <Slideshow images={images.slice(mid)} />
+      <Slideshow images={images.slice(0, mid)} label={`${eventTitle}, part 1`} />
+      <Slideshow images={images.slice(mid)} label={`${eventTitle}, part 2`} />
     </div>
   )
 }
@@ -200,6 +201,7 @@ const events = [
 ]
 
 function Events() {
+  useEffect(() => { document.title = 'Events | West Side Smiles' }, [])
   return (
     <>
       {/* Header band, full-bleed white */}
@@ -233,7 +235,7 @@ function Events() {
                     <h2 className="timeline-title">{event.title}</h2>
                   </div>
                   <div className="timeline-media">
-                    <EventMedia images={event.images} />
+                    <EventMedia images={event.images} eventTitle={event.title} />
                   </div>
                 </FadeIn>
               </div>

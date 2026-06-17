@@ -6,14 +6,14 @@ import AnimatedStat from '../components/AnimatedStat.jsx'
 const HEADLINE_WORDS = ['Teens', 'Helping', 'Those', 'In', 'Need']
 
 const gridPhotos = [
-  '/images/2winterwalkdec2025.jpg',
-  '/images/2winterwalk1dec2025.jpg',
-  '/images/2winterwalk2dec2025.jpg',
-  '/images/2hygienekitmay2026.jpg',
-  '/images/2hygienekit1may2026.jpeg',
-  '/images/hygienekitjune2023.jpg',
-  '/images/2bakesaleapril2023.jpg',
-  '/images/jordanandmilesphoot.jpg',
+  { src: '/images/2winterwalkdec2025.jpg',   alt: 'West Side Smiles volunteers at the NYC Winter Walk in Central Park, December 2025' },
+  { src: '/images/2winterwalk1dec2025.jpg',   alt: 'Volunteers gathered at the Winter Walk event, December 2025' },
+  { src: '/images/2winterwalk2dec2025.jpg',   alt: 'West Side Smiles team participating in Winter Walk in Central Park' },
+  { src: '/images/2hygienekitmay2026.jpg',    alt: 'Volunteers assembling hygiene kits at Congregation Rodeph Sholom, May 2026' },
+  { src: '/images/2hygienekit1may2026.jpeg',  alt: 'Completed hygiene kits ready for donation, May 2026' },
+  { src: '/images/hygienekitjune2023.jpg',    alt: 'West Side Smiles hygiene kit packaging event, June 2023' },
+  { src: '/images/2bakesaleapril2023.jpg',    alt: 'West Side Smiles bake sale fundraiser table, April 2023' },
+  { src: '/images/jordanandmilesphoot.jpg',   alt: 'Jordan Usdin and Miles Shankman, co-founders of West Side Smiles' },
 ]
 
 const partners = [
@@ -42,6 +42,7 @@ function useReveal() {
 }
 
 function Home() {
+  useEffect(() => { document.title = 'West Side Smiles' }, [])
   const [gridRef, gridOn] = useReveal()
 
   return (
@@ -107,13 +108,13 @@ function Home() {
       <section className="section-tight">
         <div className="container">
           <div className="photo-grid" ref={gridRef}>
-            {gridPhotos.map((src, i) => (
+            {gridPhotos.map(({ src, alt }, i) => (
               <figure
                 key={src}
                 className={`photo-grid-item${gridOn ? ' revealed' : ''}`}
                 style={{ '--stagger': i }}
               >
-                <img src={src} alt="West Side Smiles volunteers" loading="lazy" />
+                <img src={src} alt={alt} loading="lazy" />
               </figure>
             ))}
           </div>

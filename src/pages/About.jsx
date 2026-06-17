@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn.jsx'
 
@@ -20,6 +21,7 @@ const whatWeDo = [
 ]
 
 function About() {
+  useEffect(() => { document.title = 'About | West Side Smiles' }, [])
   return (
     <>
       <div className="container about-page">

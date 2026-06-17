@@ -1,9 +1,11 @@
+import { useEffect } from 'react'
 import FadeIn from '../components/FadeIn.jsx'
 
 const GOOGLE_FORM_URL =
   'https://docs.google.com/forms/d/19Caa-xoLg0Gcc7oPgxIQOL8qvPTNAHk-zGMwp6SOV_k/viewform?embedded=true'
 
 function Contact() {
+  useEffect(() => { document.title = 'Contact | West Side Smiles' }, [])
   return (
     <>
       <header className="page-header container">
@@ -20,6 +22,7 @@ function Contact() {
       <section className="section-tight">
         <div className="container">
           <FadeIn>
+            <h2 className="sr-only">Contact Information</h2>
             <div className="contact-grid">
               <div className="contact-info-card">
                 <h3>Reach Us</h3>
