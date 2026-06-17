@@ -1014,8 +1014,8 @@ a { color: var(--navy); }
 /* ============ DONATE ============ */
 .donate-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-top: 1rem;
 }
 
@@ -1087,6 +1087,7 @@ a { color: var(--navy); }
 
 @media (max-width: 768px) {
   .donate-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+
 }
 
 /* ============ CONTACT ============ */

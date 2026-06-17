@@ -45,6 +45,24 @@ function Donate() {
 
               <div className="donate-card">
                 <div className="eyebrow">Option Two</div>
+                <h3>Donate via Venmo</h3>
+                <p style={{ color: 'var(--text-soft)' }}>
+                  Quick and easy — send any amount through Venmo using the
+                  handle below.
+                </p>
+                <a
+                  className="zelle-box"
+                  href="https://venmo.com/u/Westsidesmilesnyc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="zelle-label">Venmo</span>
+                  <span className="zelle-number">@Westsidesmilesnyc</span>
+                </a>
+              </div>
+
+              <div className="donate-card">
+                <div className="eyebrow">Option Three</div>
                 <h3>Drop Off Supplies</h3>
                 <p style={{ color: 'var(--text-soft)' }}>
                   Prefer to give in person? We accept new, unopened hygiene
