@@ -44,12 +44,12 @@ function Contact() {
                 <div className="contact-item">
                   <span className="contact-label">Instagram</span>
                   <a
-                    href="https://instagram.com/westsidesmiless_"
+                    href="https://www.instagram.com/westsidesmiles_/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="contact-value"
                   >
-                    @westsidesmiless_
+                    @westsidesmiles_
                   </a>
                 </div>
 

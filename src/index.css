@@ -124,9 +124,8 @@ a { color: var(--navy); }
 /* ============ LAYOUT ============ */
 .container {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 clamp(1.5rem, 4vw, 5rem);
 }
 
 .section       { padding: 4.5rem 0; }
@@ -689,7 +688,7 @@ a { color: var(--navy); }
   margin: 0 auto;
 }
 
-/* Events gallery header — full-bleed white band */
+/* Events gallery header - full-bleed white band */
 .events-header-band {
   background: var(--white);
   border-bottom: 1px solid var(--border);
@@ -732,7 +731,7 @@ a { color: var(--navy); }
 
 /* body text fills the full container width */
 
-/* Photos row — between paragraphs */
+/* Photos row - between paragraphs */
 .about-bio-photos-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

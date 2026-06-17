@@ -14,11 +14,11 @@ function Footer() {
             </p>
             <a
               className="ig-button"
-              href="https://instagram.com/westsidesmiless_"
+              href="https://www.instagram.com/westsidesmiles_/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Follow us &nbsp;@westsidesmiless_
+              Follow us &nbsp;@westsidesmiles_
             </a>
           </div>
 
@@ -41,11 +41,11 @@ function Footer() {
               </a>
               <a href="tel:+16469392590">(646) 939-2590</a>
               <a
-                href="https://instagram.com/westsidesmiless_"
+                href="https://www.instagram.com/westsidesmiles_/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @westsidesmiless_
+                @westsidesmiles_
               </a>
             </div>
           </div>

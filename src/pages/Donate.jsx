@@ -37,17 +37,17 @@ function Donate() {
                   The fastest way to support our drives. Send any amount
                   directly through Zelle using the phone number below.
                 </p>
-                <a className="zelle-box" href="tel:+16469392590">
-                  <span className="zelle-label">Zelle</span>
+                <div className="zelle-box">
+                  <span className="zelle-label">Zelle to</span>
                   <span className="zelle-number">(646) 939-2590</span>
-                </a>
+                </div>
               </div>
 
               <div className="donate-card">
                 <div className="eyebrow">Option Two</div>
                 <h3>Donate via Venmo</h3>
                 <p style={{ color: 'var(--text-soft)' }}>
-                  Quick and easy — send any amount through Venmo using the
+                  Quick and easy. Send any amount through Venmo using the
                   handle below.
                 </p>
                 <a
