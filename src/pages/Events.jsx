@@ -27,8 +27,8 @@ const events = [
     date: 'June 2026',
     title: 'Dropping Off T-Shirts and Hygiene Kits at Covenant House Shelters',
     images: [
-      '/images/shipping.jpg',
       '/images/shipping1.jpg',
+      '/images/shipping.jpg',
       '/images/shipping2.jpeg',
     ],
   },
