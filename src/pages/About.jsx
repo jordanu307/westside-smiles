@@ -32,11 +32,19 @@ function About() {
 
         <FadeIn className="about-body">
           <p>
-            Hello! Our names are Miles Shankman and Jordan Usdin. We are two high
-            schoolers living on the Upper West Side. In 2021, our sisters, Sydney and
-            Ellie, founded the organization West Side Smiles, which supports homelessness
-            in New York City. It is uncomfortable not to have adequate hygiene, especially
-            during the rough transition period of being in a shelter.
+            In 2021, our sisters Sydney and Ellie founded West Side Smiles to support
+            people experiencing homelessness in New York City. What started as a simple
+            idea on the Upper West Side grew into a real force for good, building
+            relationships with shelters across the city and showing just how much a small
+            group of people can accomplish.
+          </p>
+          <p>
+            Now we, Miles Shankman and Jordan Usdin, are carrying on the mission they
+            started. We are two high schoolers who grew up watching this organization
+            take shape and are committed to keeping it going. We believe that no one
+            should go without basic hygiene, especially during the difficult transition
+            of shelter life, and we show up for that belief every time we pack a kit
+            or walk into a shelter.
           </p>
         </FadeIn>
 
