@@ -22,7 +22,7 @@ function Navbar() {
       <div className="navbar-inner">
         <NavLink to="/" className="nav-logo" aria-label="West Side Smiles home">
           <img src="/images/logo-tan.svg" alt="" className="nav-logo-img" />
-          West Side <span>Smiles</span>
+          West Side Smiles
         </NavLink>
 
         <button

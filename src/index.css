@@ -271,9 +271,6 @@ a { color: var(--navy); }
   flex-shrink: 0;
 }
 
-.nav-logo span {
-  font-style: italic;
-}
 
 .nav-links {
   display: flex;

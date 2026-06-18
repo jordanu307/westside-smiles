@@ -23,6 +23,16 @@ function EventMedia({ images, eventTitle }) {
 
 const events = [
   {
+    id: 'jun2026',
+    date: 'June 2026',
+    title: 'Dropping Off T-Shirts and Hygiene Kits at Covenant House Shelters',
+    images: [
+      '/images/shipping.jpg',
+      '/images/shipping1.jpg',
+      '/images/shipping2.jpeg',
+    ],
+  },
+  {
     id: 'may2026',
     date: 'May 2026',
     title: 'Hygiene Kit Drive at Congregation Rodeph Sholom',
