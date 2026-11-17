@@ -5,16 +5,30 @@ import AnimatedStat from '../components/AnimatedStat.jsx'
 
 const HEADLINE_WORDS = ['Teens', 'Helping', 'Those', 'In', 'Need']
 
-const gridPhotos = [
-  { src: '/images/2winterwalkdec2025.jpg',   alt: 'West Side Smiles volunteers at the NYC Winter Walk in Central Park, December 2025' },
-  { src: '/images/2winterwalk1dec2025.jpg',   alt: 'Volunteers gathered at the Winter Walk event, December 2025' },
-  { src: '/images/3hygienekitnov2026.jpg',    alt: 'Four young volunteers wearing West Side Smiles stickers at the hygiene kit packing event at Congregation Rodeph Sholom, November 2026' },
-  { src: '/images/3hygienekit2nov2026.jpg',   alt: 'Volunteers filling decorated bags with toothpaste and deodorant at Congregation Rodeph Sholom, November 2026' },
-  { src: '/images/2hygienekitmay2026.jpg',    alt: 'Volunteers assembling hygiene kits at Congregation Rodeph Sholom, May 2026' },
-  { src: '/images/hygienekitjune2023.jpg',    alt: 'West Side Smiles hygiene kit packaging event, June 2023' },
-  { src: '/images/2bakesaleapril2023.jpg',    alt: 'West Side Smiles bake sale fundraiser table, April 2023' },
-  { src: '/images/jordanandmilesphoot.jpg',   alt: 'Jordan Usdin and Miles Shankman, co-founders of West Side Smiles' },
+// Photos are grouped in pairs (one landscape + one portrait) and laid out as
+// justified rows: each photo's width is proportional to its aspect ratio, so
+// every photo in a row is the same height, nothing is cropped, and the rows
+// sit flush with no leftover gaps. On phones each pair becomes its own row.
+const gridPairs = [
+  [
+    { src: '/images/2winterwalkdec2025.jpg',  ratio: 4 / 3, alt: 'West Side Smiles volunteers at the NYC Winter Walk in Central Park, December 2025' },
+    { src: '/images/2winterwalk1dec2025.jpg', ratio: 3 / 4, alt: 'Volunteers gathered at the Winter Walk event, December 2025' },
+  ],
+  [
+    { src: '/images/3hygienekitnov2026.jpg',  ratio: 4 / 3, alt: 'Four young volunteers wearing West Side Smiles stickers at the hygiene kit packing event at Congregation Rodeph Sholom, November 2026' },
+    { src: '/images/3hygienekit2nov2026.jpg', ratio: 3 / 4, alt: 'Volunteers filling decorated bags with toothpaste and deodorant at Congregation Rodeph Sholom, November 2026' },
+  ],
+  [
+    { src: '/images/hygienekitjune2023.jpg',  ratio: 3 / 4, alt: 'West Side Smiles hygiene kit packaging event, June 2023' },
+    { src: '/images/2hygienekitmay2026.jpg',  ratio: 4 / 3, alt: 'Volunteers assembling hygiene kits at Congregation Rodeph Sholom, May 2026' },
+  ],
+  [
+    { src: '/images/jordanandmilesphoot.jpg', ratio: 3 / 4, alt: 'Jordan Usdin and Miles Shankman, co-founders of West Side Smiles' },
+    { src: '/images/2bakesaleapril2023.jpg',  ratio: 4 / 3, alt: 'West Side Smiles bake sale fundraiser table, April 2023' },
+  ],
 ]
+const gridRows = [gridPairs.slice(0, 2), gridPairs.slice(2, 4)]
+const pairRatio = (pair) => pair.reduce((sum, p) => sum + p.ratio, 0)
 
 const partners = [
   { logo: '/images/cov.png',   name: 'Covenant House New York',           href: 'https://ny.covenanthouse.org' },
@@ -108,14 +122,22 @@ function Home() {
       <section className="section-tight">
         <div className="container">
           <div className="photo-grid" ref={gridRef}>
-            {gridPhotos.map(({ src, alt }, i) => (
-              <figure
-                key={src}
-                className={`photo-grid-item${gridOn ? ' revealed' : ''}`}
-                style={{ '--stagger': i }}
-              >
-                <img src={src} alt={alt} loading="lazy" />
-              </figure>
+            {gridRows.map((row, r) => (
+              <div className="photo-row" key={r}>
+                {row.map((pair, p) => (
+                  <div className="photo-pair" key={p} style={{ '--r': pairRatio(pair) }}>
+                    {pair.map(({ src, alt, ratio }, i) => (
+                      <figure
+                        key={src}
+                        className={`photo-grid-item${gridOn ? ' revealed' : ''}`}
+                        style={{ '--r': ratio, '--stagger': r * 4 + p * 2 + i }}
+                      >
+                        <img src={src} alt={alt} loading="lazy" />
+                      </figure>
+                    ))}
+                  </div>
+                ))}
+              </div>
             ))}
           </div>
         </div>

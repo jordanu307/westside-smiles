@@ -100,6 +100,7 @@ function Slideshow({ images = [], interval = 4000, label = 'Photo slideshow' }) 
             transition={slideTransition}
             className="slideshow-frame"
           >
+            <img src={images[index]} alt="" aria-hidden="true" className="slideshow-backdrop" />
             <img
               src={images[index]}
               alt={`${label}, photo ${index + 1} of ${images.length}`}
