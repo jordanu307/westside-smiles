@@ -8,9 +8,9 @@ const HEADLINE_WORDS = ['Teens', 'Helping', 'Those', 'In', 'Need']
 const gridPhotos = [
   { src: '/images/2winterwalkdec2025.jpg',   alt: 'West Side Smiles volunteers at the NYC Winter Walk in Central Park, December 2025' },
   { src: '/images/2winterwalk1dec2025.jpg',   alt: 'Volunteers gathered at the Winter Walk event, December 2025' },
-  { src: '/images/2winterwalk2dec2025.jpg',   alt: 'West Side Smiles team participating in Winter Walk in Central Park' },
+  { src: '/images/3hygienekitnov2026.jpg',    alt: 'Four young volunteers wearing West Side Smiles stickers at the hygiene kit packing event at Congregation Rodeph Sholom, November 2026' },
+  { src: '/images/3hygienekit2nov2026.jpg',   alt: 'Volunteers filling decorated bags with toothpaste and deodorant at Congregation Rodeph Sholom, November 2026' },
   { src: '/images/2hygienekitmay2026.jpg',    alt: 'Volunteers assembling hygiene kits at Congregation Rodeph Sholom, May 2026' },
-  { src: '/images/2hygienekit1may2026.jpeg',  alt: 'Completed hygiene kits ready for donation, May 2026' },
   { src: '/images/hygienekitjune2023.jpg',    alt: 'West Side Smiles hygiene kit packaging event, June 2023' },
   { src: '/images/2bakesaleapril2023.jpg',    alt: 'West Side Smiles bake sale fundraiser table, April 2023' },
   { src: '/images/jordanandmilesphoot.jpg',   alt: 'Jordan Usdin and Miles Shankman, co-founders of West Side Smiles' },
@@ -78,7 +78,7 @@ function Home() {
           <FadeIn>
             <div className="stats-grid">
               <AnimatedStat value={750} suffix="+" label="lbs of supplies donated" />
-              <AnimatedStat value={500} suffix="+" label="hygiene kits assembled" />
+              <AnimatedStat value={750} suffix="+" label="hygiene kits assembled" />
               <AnimatedStat value={7}   suffix="+" label="shelters partnered with" />
             </div>
           </FadeIn>

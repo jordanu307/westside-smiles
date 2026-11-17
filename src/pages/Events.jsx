@@ -23,6 +23,23 @@ function EventMedia({ images, eventTitle }) {
 
 const events = [
   {
+    id: 'nov2026',
+    date: 'November 2026',
+    title: 'Hygiene Kit Packing at Congregation Rodeph Sholom for Covenant House',
+    images: [
+      '/images/3hygienekitnov2026.jpg',
+      '/images/3hygienekit1nov2026.jpg',
+      '/images/3hygienekit4nov2026.jpg',
+      '/images/3hygienekit6nov2026.jpg',
+      '/images/3hygienekit8nov2026.jpg',
+      '/images/3hygienekit2nov2026.jpg',
+      '/images/3hygienekit3nov2026.jpg',
+      '/images/3hygienekit5nov2026.jpg',
+      '/images/3hygienekit7nov2026.jpg',
+      '/images/3hygienekit9nov2026.jpg',
+    ],
+  },
+  {
     id: 'jun2026',
     date: 'June 2026',
     title: 'Dropping Off T-Shirts and Hygiene Kits at Covenant House Shelters',
